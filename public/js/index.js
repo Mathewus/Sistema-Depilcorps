@@ -50,7 +50,7 @@ function showhide(){
 
 $(document).ready(function () {
     
-    $.getJSON('https://gist.githubusercontent.com/ografael/2037135/raw/5d31e7baaddd0d599b64c3ec04827fc244333447/estados_cidades.json', function (data) {
+    $.getJSON('/js/JSON_estados_cidades.json', function (data) {
         var estados = data;
         var options = '<option value="">Selecione um estado</option>';
         
