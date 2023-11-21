@@ -35,7 +35,7 @@ class AgendamentoController extends Controller
         } else {
             $agendamentos = Agendamento::where('data', $data)->orWhereHas('cliente', function ($query) use ($nome) {
                 $query->where('nome', 'like', '%' . $nome . '%');
-            })->orderBy('data', 'asc')->orderBy('hora', 'asc')->paginate(10);
+            })->orderBy('status', 'asc')->orderBy('data', 'asc')->orderBy('hora', 'asc')->paginate(10);
         }
 
         $totalAgendamentos = Agendamento::all()->count();
